@@ -1,5 +1,6 @@
-.header.bg-primary.d-flex
-  img.logo(src="../sprite/logo.svg")
+.header.bg-primary.d-flex.rounded-tl
+  svg(fill='inherit')
+    use(xlink:href='../images/stack/sprite.svg#logo')
   ul.nav.nav-pills
     li.nav-item
       a.nav-link.active(href="#") Icon Контакты
@@ -7,3 +8,7 @@
       a.nav-link(href="#") Icon Сообщения
     li.nav-item
       a.nav-link(href="#") Icon Профиль
+.work-panel.pt-5.px-4
+  h1 Контакты
+  form(action="/")
+    input(type="search" placeholder="Поиск по контактам")

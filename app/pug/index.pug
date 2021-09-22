@@ -1,22 +1,18 @@
 include ./components/mixin.pug
 doctype html
-html.vh-100(lang='ru')
+html.h-100(lang='ru')
   head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel='stylesheet', href='/css/app.css')
     title Мессенджер «Hexlet Chat» Чурилова Мария
-  body.vh-100
-    .container-xxl.vh-100.border.border-gray.rounded
-      .row.vh-100
-        .col-4
+  body.h-100.p-md-4.bg-gray
+    .container-xxl.h-100.bg-white.border.border-gray.rounded-xxl.p-0
+      .row.h-100.m-0.p-0
+        .col-4.p-0.border.border-gray
           include ./components/header.pug
-          .work-panel.pt-5.px-4
-            h1 Контакты
-            form(action="/")
-              input(type="search" placeholder="Поиск по контактам")
-        .col.chat-window.position-relative
+        .col
           include ./components/unactive-chat.pug
           
 

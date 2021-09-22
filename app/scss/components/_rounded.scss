@@ -1,0 +1,9 @@
+.rounded {
+  &-xxl {
+    border-radius: px-to-rem(16px);
+  }
+
+  &-tl {
+    border-radius: px-to-rem(16px 0 0);
+  }
+}

@@ -1,0 +1,19 @@
+
+@function px-to-rem($value) {
+  $rem-list: ();
+
+  @each $number in $value {
+    $rem-value: 0;
+
+    @if (str-index('#{$number}', 'px')) {
+      $rem-value: $number / 16px;
+    }
+
+    @else {
+      $rem-value: $number / 16;
+    }
+    $rem-list: append($rem-list, #{$rem-value}rem);
+  }
+
+  @return #{$rem-list};
+}

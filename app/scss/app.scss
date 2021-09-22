@@ -1,3 +1,5 @@
 @import "./variables";
 @import "./../node_modules/bootstrap/scss/bootstrap";
+@import "./components/_px_to_rem";
+@import "./components/rounded";
 @import "./components/header";
