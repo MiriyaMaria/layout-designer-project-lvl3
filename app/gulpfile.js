@@ -70,7 +70,7 @@ const local = (cb) => {
   });
 
   gulp.watch('./scss/*.scss', scss);
-  gulp.watch('./pug/*.pug', pugjs);
+  gulp.watch('./pug/**/*.pug', pugjs);
   gulp.watch('./../build/*.html').on('change', browserSync.reload);
 }
 
