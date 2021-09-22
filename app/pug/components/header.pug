@@ -1,14 +1,22 @@
-.header.bg-primary.d-flex.rounded-tl
-  svg(fill='inherit')
-    use(xlink:href='../images/stack/sprite.svg#logo')
-  ul.nav.nav-pills
-    li.nav-item
-      a.nav-link.active(href="#") Icon Контакты
-    li.nav-item
-      a.nav-link(href="#") Icon Сообщения
-    li.nav-item
-      a.nav-link(href="#") Icon Профиль
-.work-panel.pt-5.px-4
-  h1 Контакты
-  form(action="/")
-    input(type="search" placeholder="Поиск по контактам")
+.header.bg-primary.d-flex.justify-content-around.align-items-center.rounded-tl
+  +icon(logo)
+  ul.nav.nav-pills(id="pills-tab" role="tablist")
+    li.nav-item(role="presentation")
+      a.nav-link.active(id="pills-contacts-tab" data-toggle="pill" href="#pills-contacts" role="tab" aria-controls="pills-contacts" aria-selected="true") Контакты
+    li.nav-item(role="presentation")
+      a.nav-link(id="pills-chat-tab" data-toggle="pill" href="#pills-chat" role="tab" aria-controls="pills-chat" aria-selected="false") Сообщения
+    li.nav-item(role="presentation")
+      a.nav-link(id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false") Icon Профиль
+.work-panel.tab-content.pt-5.px-4(id="pills-tabContent")
+  .tab-pane.fade.show.active(id="pills-contacts" role="tabpanel" aria-labelledby="pills-contacts-tab")
+    h1 Контакты
+    form(action="/")
+      input(type="search" placeholder="Поиск по контактам")
+  .tab-pane.fade(id="pills-chat" role="tabpanel" aria-labelledby="pills-chat-tab")
+    h1 Чаты
+    form(action="/")
+      input(type="search" placeholder="Поиск по сообщениям")
+  .tab-pane.fade(id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab")
+    h1 Профиль
+    form(action="/")
+      input(type="search" placeholder="Поиск по сообщениям")
