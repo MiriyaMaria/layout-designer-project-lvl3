@@ -1,0 +1,8 @@
+.contact {
+  &:hover {
+    color: $white;
+    background-color: $primary;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}

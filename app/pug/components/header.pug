@@ -1,4 +1,4 @@
-.header.bg-primary.d-flex.justify-content-around.align-items-center.rounded-tl
+.header.bg-primary.d-flex.justify-content-around.align-items-center.rounded-tl.sticky-top
   +icon('logo')
   ul.nav.nav-pills(id="pills-tab", role="tablist")
     li.nav-item
@@ -13,17 +13,17 @@
       a.nav-link(id="pills-profile-tab", data-toggle="pill", href="#pills-profile", role="tab", aria-controls="pills-profile", aria-selected="false")
       +icon('person')
       |Профиль
-.work-panel.tab-content.pt-5.px-4(id="pills-tabContent")
+.work-panel.h-100.tab-content.pt-5.px-4(id="pills-tabContent")
   .tab-pane.fade.show.active(id="pills-contacts", role="tabpanel", aria-labelledby="pills-contacts-tab")
     h1 Контакты
     form(action="/")
-      input(type="search", placeholder="Поиск по контактам")
-    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      input.form-control.border-0.shadow-none(type="search", placeholder="Поиск по контактам")
+    include ./contacts.pug
   .tab-pane.fade(id="pills-chat", role="tabpanel", aria-labelledby="pills-chat-tab")
     h1 Чаты
     form(action="/")
-      input(type="search", placeholder="Поиск по сообщениям")
+      input.form-control.border-0.shadow-none(type="search", placeholder="Поиск по сообщениям")
   .tab-pane.fade(id="pills-profile", role="tabpanel", aria-labelledby="pills-profile-tab")
     h1 Профиль
     form(action="/")
-      input(type="search", placeholder="Поиск по сообщениям")
+      input.form-control.border-0.shadow-none(type="search", placeholder="Поиск по сообщениям")
