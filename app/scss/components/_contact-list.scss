@@ -1,8 +1,31 @@
 .contact {
+  $block: &;
+
+  &-name {
+    @include text-truncate();
+    margin: 0;
+    padding: 0;
+    color: map-get($map: $theme-colors, $key: "dark");
+    font-weight: bold;
+  }
+
+  &-status {
+    @include text-truncate();
+    margin: 0;
+    padding: 0;
+    color: map-get($map: $colors, $key: "grey-600");
+    font-size: $small-font-size;
+  }
+
   &:hover {
-    color: $white;
-    background-color: $primary;
+    color: white;
+    background-color: map-get($map: $theme-colors, $key: "primary");
     cursor: pointer;
     text-decoration: none;
+
+    #{$block}-name, 
+    #{$block}-status {
+      color: white;
+    }
   }
 }
