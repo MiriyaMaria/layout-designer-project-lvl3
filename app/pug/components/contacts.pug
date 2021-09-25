@@ -38,9 +38,9 @@
 
 each users, letter in contacts
   .letter.text-muted.mt-5= letter
-   each user in users
-      a.contact.d-flex.align-items-center.mb-3.p-4
-        img.avatar(src=user.avatar).mr-4
-        .name
-          p.m-0.p-0= user.name
-          p.m-0.p-0= user.status
+  each user in users
+    a.contact.d-flex.align-items-center.mb-3.p-4
+      img.avatar(src=user.avatar).mr-4
+      .name.text-dark
+        p.m-0.p-0.font-weight-bold= user.name
+        p.m-0.p-0.text-muted= user.status

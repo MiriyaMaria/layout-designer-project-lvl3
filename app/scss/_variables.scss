@@ -4,6 +4,7 @@ $theme-colors: (
 );
 
 $enable-shadows: true;
+$enable-responsive-font-sizes: true;
 
 $grid-breakpoints: (
   xs: 0,
@@ -21,3 +22,4 @@ $container-max-widths: (
   xl: 1140px,
   xxl: 1540px
 );
+
