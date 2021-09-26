@@ -3,17 +3,13 @@
 
   &-name {
     @include text-truncate();
-    margin: 0;
-    padding: 0;
     color: map-get($map: $theme-colors, $key: "dark");
     font-weight: bold;
   }
 
   &-status {
     @include text-truncate();
-    margin: 0;
-    padding: 0;
-    color: map-get($map: $colors, $key: "grey-600");
+    color: map-get($map: $grays, $key: "600");
     font-size: $small-font-size;
   }
 

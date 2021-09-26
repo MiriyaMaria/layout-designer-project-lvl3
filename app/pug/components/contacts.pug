@@ -41,6 +41,6 @@ each users, letter in contacts
   each user in users
     a.contact.d-flex.align-items-center.mb-3.p-4
       img.avatar(src=user.avatar).mr-4
-      .name
-        p.contact-name= user.name
-        p.contact-status= user.status
+      span.d-flex.flex-column
+        span.contact-name= user.name
+        span.contact-status= user.status
