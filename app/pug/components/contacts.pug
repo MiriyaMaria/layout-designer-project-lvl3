@@ -37,9 +37,9 @@
   }
 
 each users, letter in contacts
-  .letter.text-muted.mt-5= letter
+  .letter.text-muted.mt-5.mb-4= letter
   each user in users
-    a.contact.d-flex.align-items-center.mb-3.p-4
+    a.contact.d-flex.align-items-center.mb-3.p-4.shadow-sm
       img.avatar(src=user.avatar).mr-4
       span.d-flex.flex-column
         span.contact-name= user.name
