@@ -1,0 +1,14 @@
+mixin message(name, avatar, text, time)
+  a.message.d-flex.align-items-center.mb-3.shadow-sm
+    img.avatar(src=avatar).mr-4
+    span.d-flex.flex-column.w-100
+      span.d-flex.justify-content-between.align-items-center.w-100
+        span.message-name= name
+        if time 
+          span.message-time= time
+      if text
+        span.message-text= text
+
++message('Вениамин Редакторович', '../images/avatar_4.jpg', 'o_O', '11:45')
++message('Джедай Падаванов', '../images/avatar_2.jpg', 'Привет, скоро третий проект? Уже скоро надо будет выложить', '10:12')
++message('Алексей Примадонин', '../images/avatar_3.jpg', 'Тесты упали >_<', '08:53')

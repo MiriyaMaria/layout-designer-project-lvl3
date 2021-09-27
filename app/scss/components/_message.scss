@@ -1,4 +1,4 @@
-.contact {
+.message {
   $block: &;
   padding: px-to-rem(20px);
 
@@ -8,8 +8,13 @@
     font-weight: bold;
   }
 
-  &-status {
+  &-text {
     @include text-truncate();
+    color: map-get($map: $grays, $key: "600");
+    font-size: $small-font-size;
+  }
+
+  &-time {
     color: map-get($map: $grays, $key: "600");
     font-size: $small-font-size;
   }
@@ -21,7 +26,8 @@
     text-decoration: none;
 
     #{$block}-name, 
-    #{$block}-status {
+    #{$block}-text,
+    #{$block}-time {
       color: white;
     }
   }
