@@ -1,0 +1,5 @@
+.profile {
+  &-status {
+    color: map-get($map: $grays, $key: "600");
+  }
+}

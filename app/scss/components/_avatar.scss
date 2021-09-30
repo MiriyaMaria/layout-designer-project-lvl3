@@ -8,4 +8,11 @@
     height: px-to-rem(200px);
     border-radius: px-to-rem(100px);
   }
+
+  &-profile {
+    width: px-to-rem(90px);
+    height: px-to-rem(90px);
+    margin-top: px-to-rem(32px);
+    border-radius: px-to-rem(100px);
+  }
 }

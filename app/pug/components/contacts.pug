@@ -36,14 +36,7 @@
     }],
   }
 
-mixin contact(name, avatar, status)
-  a.contact.d-flex.align-items-center.mt-3.shadow-sm
-      img.avatar(src=avatar).mr-4
-      span.d-flex.flex-column
-        span.contact-name= name
-        span.contact-status= status
-
 each users, letter in contacts
   .letter.text-muted.mt-5.mb-1= letter
   each user in users
-    +contact(user.name, user.avatar, user.status)
+    +block(user.name, user.avatar, user.status)

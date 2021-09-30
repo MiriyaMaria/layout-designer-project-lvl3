@@ -1,3 +1,13 @@
 mixin icon(name)
   svg.icon(fill='inherit')
     use(xlink:href='../images/stack/sprite.svg#' + name)
+
+mixin block(name, avatar, text, time)
+  a.block.d-flex.align-items-center.mt-3.shadow-sm
+    img.avatar(src=avatar).mr-4
+    span.d-flex.flex-column.overflow-hidden
+      span.block-name.d-flex= name
+        if time 
+          span.block-time= time
+      if text
+        span.block-text= text

@@ -1,4 +1,4 @@
-.message {
+.block {
   $block: &;
   padding: px-to-rem(20px);
 
@@ -15,7 +15,9 @@
   }
 
   &-time {
+    margin-left: auto;
     color: map-get($map: $grays, $key: "600");
+    font-weight: normal;
     font-size: $small-font-size;
   }
 
