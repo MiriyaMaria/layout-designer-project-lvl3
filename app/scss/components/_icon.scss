@@ -1,4 +1,9 @@
 .icon {
   width: px-to-rem(25px);
   height: px-to-rem(25px);
+
+  &-small {
+    width: px-to-rem(16px);
+    height: px-to-rem(16px);
+  }
 }

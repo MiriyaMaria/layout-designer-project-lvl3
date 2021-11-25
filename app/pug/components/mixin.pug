@@ -2,6 +2,10 @@ mixin icon(name)
   svg.icon(fill='inherit')
     use(xlink:href='../images/stack/sprite.svg#' + name)
 
+mixin badge(name)
+  svg.badge.p-0.icon-small(fill='inherit')
+    use(xlink:href='../images/stack/sprite.svg#' + name)
+
 mixin block(name, avatar, text, time)
   a.block.d-flex.align-items-center.mt-3.shadow-sm
     img.avatar(src=avatar).mr-4

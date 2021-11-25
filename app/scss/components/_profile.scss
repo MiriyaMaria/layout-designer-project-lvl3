@@ -2,4 +2,11 @@
   &-status {
     color: map-get($map: $grays, $key: "600");
   }
+  &-data {
+    margin: px-to-rem(56px 27px 0 21px);
+
+    &-item {
+      padding: px-to-rem(15px 14px 12px 19px);
+    }
+  }
 }
