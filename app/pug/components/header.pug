@@ -1,31 +1,31 @@
 .header.bg-primary.d-flex.justify-content-end.align-items-center.rounded-tl
-  a(href="#").mr-auto
+  a.me-auto(href="#")
     +icon('logo')
-  ul.nav.nav-pills(id="pills-tab", role="tablist")
-    li.nav-item
-      a.nav-link.active.text-white(id="pills-contacts-tab", data-toggle="pill", href="#pills-contacts", role="tab", aria-controls="pills-contacts", aria-selected="true") 
+  ul.nav.nav-tabs.border-0(id="nav-tab", role="tablist")
+    li.nav-item.d-flex.flex-nowrap(role="presentation")
+      a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent.justify-content-between(id="contacts-tab", data-bs-toggle="tab", data-bs-target="#contacts", type="button", role="tab", aria-controls="contacts", aria-selected="true") 
         +icon('people') 
-        span.ml-2.small Контакты
-    li.nav-item
-      a.nav-link.text-white(id="pills-chat-tab", data-toggle="pill", href="#pills-chat", role="tab", aria-controls="pills-chat", aria-selected="false")
+        span.ms-2.small Контакты
+    li.nav-item.d-flex.flex-nowrap(role="presentation")
+      a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent(id="chat-tab", data-bs-toggle="tab", data-bs-target="#chat", type="button", role="tab", aria-controls="chat", aria-selected="false")
         +icon('chat') 
-        span.ml-2.small Сообщения
-    li.nav-item
-      a.nav-link.text-white(id="pills-profile-tab", data-toggle="pill", href="#pills-profile", role="tab", aria-controls="pills-profile", aria-selected="false")
+        span.ms-2.small Сообщения
+    li.nav-item.d-flex.flex-nowrap(role="presentation")
+      a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent(id="profile-tab", data-bs-toggle="tab", data-bs-target="#profile", type="button", role="tab", aria-controls="profile", aria-selected="false")
         +icon('person')
-        span.ml-2.small Профиль
-.work-panel.tab-content.pt-5.px-4(id="pills-tabContent")
-  .tab-pane.fade.show.active(id="pills-contacts", role="tabpanel", aria-labelledby="pills-contacts-tab")
+        span.ms-2.small Профиль
+.work-panel.tab-content.pt-5.px-4(id="nav-tabContent")
+  .tab-pane.fade.show.active(id="contacts", role="tabpanel", aria-labelledby="contacts-tab")
     h2.mb-4.font-weight-bold Контакты
     form.mb-5(action="/")
       input.form-control.p-4.border-top-0.border-right-0.border-bottom.border-left-0.bg-white.shadow-none(type="search", placeholder="Поиск по контактам")
     include ./contacts.pug
-  .tab-pane.fade(id="pills-chat", role="tabpanel", aria-labelledby="pills-chat-tab")
+  .tab-pane.fade(id="chat", role="tabpanel", aria-labelledby="chat-tab")
     h2.mb-4.font-weight-bold Чаты
     form.mb-5(action="/")
       input.form-control.p-4.border-top-0.border-right-0.border-bottom.border-left-0.bg-white.shadow-none(type="search", placeholder="Поиск по сообщениям")
     include ./messages.pug
-  .tab-pane.fade(id="pills-profile", role="tabpanel", aria-labelledby="pills-profile-tab")
+  .tab-pane.fade(id="profile", role="tabpanel", aria-labelledby="profile-tab")
     h2.mb-4.font-weight-bold Профиль
     form.mb-5(action="/")
       input.form-control.p-4.border-top-0.border-right-0.border-bottom.border-left-0.bg-white.shadow-none(type="search", placeholder="Поиск по сообщениям")
