@@ -4,8 +4,9 @@
 
   &-name {
     @include text-truncate();
-    color: map-get($map: $theme-colors, $key: "dark");
+    color: map-get($map: $colors, $key: "gray-dark");
     font-weight: bold;
+    text-decoration: none;
   }
 
   &-text {

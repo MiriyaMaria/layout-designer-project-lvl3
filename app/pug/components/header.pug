@@ -16,17 +16,17 @@
         span.ms-2.small Профиль
 .work-panel.tab-content.pt-5.px-4(id="nav-tabContent")
   .tab-pane.fade.show.active(id="contacts", role="tabpanel", aria-labelledby="contacts-tab")
-    h2.mb-4.font-weight-bold Контакты
+    h2.mb-4.fw-bold.lh-1 Контакты
     form.mb-5(action="/")
-      input.form-control.p-4.border-top-0.border-right-0.border-bottom.border-left-0.bg-white.shadow-none(type="search", placeholder="Поиск по контактам")
+      input.form-control.p-4.border-top-0.border-end-0.border-bottom.border-start-0.bg-white.shadow-none(type="search", placeholder="Поиск по контактам")
     include ./contacts.pug
   .tab-pane.fade(id="chat", role="tabpanel", aria-labelledby="chat-tab")
-    h2.mb-4.font-weight-bold Чаты
+    h2.mb-4.fw-bold.lh-1 Чаты
     form.mb-5(action="/")
-      input.form-control.p-4.border-top-0.border-right-0.border-bottom.border-left-0.bg-white.shadow-none(type="search", placeholder="Поиск по сообщениям")
+      input.form-control.p-4.border-top-0.border-end-0.border-bottom.border-start-0.bg-white.shadow-none(type="search", placeholder="Поиск по сообщениям")
     include ./messages.pug
   .tab-pane.fade(id="profile", role="tabpanel", aria-labelledby="profile-tab")
-    h2.mb-4.font-weight-bold Профиль
+    h2.mb-4.fw-bold.lh-1 Профиль
     form.mb-5(action="/")
-      input.form-control.p-4.border-top-0.border-right-0.border-bottom.border-left-0.bg-white.shadow-none(type="search", placeholder="Поиск по сообщениям")
+      input.form-control.p-4.border-top-0.border-end-0.border-bottom.border-start-0.bg-white.shadow-none(type="search", placeholder="Поиск по сообщениям")
     include ./profile.pug
