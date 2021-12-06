@@ -1,6 +1,6 @@
 @import "./variables";
-@import "./utilities";
 @import "./../node_modules/bootstrap/scss/bootstrap";
+@import "./utilities";
 @import "./components/_px_to_rem";
 @import "./general.scss";
 @import "./components/_hide-scrollbar";
