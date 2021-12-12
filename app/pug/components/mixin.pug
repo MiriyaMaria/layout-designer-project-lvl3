@@ -8,7 +8,7 @@ mixin badge(name)
 
 mixin block(name, avatar, text, time)
   a.block.d-flex.align-items-center.mt-3.ps-3.pt-4.pe-5.shadow-sm.text-decoration-none
-    img.avatar(src=avatar).me-4.radius
+    img.avatar(src=avatar).me-4.radius-50
     span.d-flex.flex-column.overflow-hidden.w-100
       span.block-name.d-flex= name
         if time 

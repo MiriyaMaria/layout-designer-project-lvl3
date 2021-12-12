@@ -1,77 +1,77 @@
 // Radius
-$utilities: map-merge(
-  $utilities,
-  (
-    "radius": (
-      responsive: true,
-      property: border-radius,
-      class: radius,
-      values: (null: 1rem)
-    ),
-    "radius-left": (
-      responsive: true,
-      property: border-top-left-radius border-bottom-left-radius,
-      class: radius-left,
-      values: (null: 1rem)
-    ),
-    "radius-right": (
-      responsive: true,
-      property: border-top-right-radius border-bottom-right-radius,
-      class: radius-right,
-      values: (null: 1rem)
-    ),
-    "radius-left-top": (
-      responsive: true,
-      property: border-top-left-radius,
-      class: radius-left-top,
-      values: (null: 1rem)
-    ),
+$utilities: (
+  "radius": (
+    responsive: true,
+    property: border-radius,
+    class: radius,
+    values: (null: 1rem, 50: 50px, 100: 100px)
+  ),
+
+  "radius-left": (
+    responsive: true,
+    property: border-top-left-radius border-bottom-left-radius,
+    class: radius-left,
+    values: (null: 1rem)
+  ),
+  "radius-right": (
+    responsive: true,
+    property: border-top-right-radius border-bottom-right-radius,
+    class: radius-right,
+    values: (null: 1rem)
+  ),
+  "radius-left-top": (
+    responsive: true,
+    property: border-top-left-radius,
+    class: radius-left-top,
+    values: (null: 1rem)
   )
 );
 
 // Border
-
-$utilities: (
-  "border": (
-    responsive: true,
-    property: border,
-    values: (
-      null: $border-width solid $border-color,
-      0: 0,
-    )
-  ),
-  "border-top": (
-    responsive: true,
-    property: border-top,
-    values: (
-      null: $border-width solid $border-color,
-      0: 0,
-    )
-  ),
-  "border-end": (
-    responsive: true,
-    property: border-right,
-    class: border-end,
-    values: (
-      null: $border-width solid $border-color,
-      0: 0,
-    )
-  ),
-  "border-bottom": (
-    responsive: true,
-    property: border-bottom,
-    values: (
-      null: $border-width solid $border-color,
-      0: 0,
-    )
-  ),
-  "border-start": (
-    responsive: true,
-    property: border-left,
-    class: border-start,
-    values: (
-      null: $border-width solid $border-color,
-      0: 0,
+$utilities: map-merge(
+  $utilities,
+    (
+      "border": (
+        responsive: true,
+        property: border,
+        values: (
+          null: $border-width solid $border-color,
+          0: 0,
+        )
+      ),
+      "border-top": (
+        responsive: true,
+        property: border-top,
+        values: (
+          null: $border-width solid $border-color,
+          0: 0,
+        )
+      ),
+      "border-end": (
+        responsive: true,
+        property: border-right,
+        class: border-end,
+        values: (
+          null: $border-width solid $border-color,
+          0: 0,
+        )
+      ),
+      "border-bottom": (
+        responsive: true,
+        property: border-bottom,
+        values: (
+          null: $border-width solid $border-color,
+          0: 0,
+        )
+      ),
+      "border-start": (
+        responsive: true,
+        property: border-left,
+        class: border-start,
+        values: (
+          null: $border-width solid $border-color,
+          0: 0,
+        )
     )
   )
 );
