@@ -75,3 +75,36 @@ $utilities: map-merge(
     )
   )
 );
+
+//Width
+$utilities: map-merge(
+  $utilities,
+    (
+      "width": (
+        responsive: true,
+        property: width,
+        class: w,
+        values: (
+          50p: px-to-rem(50px),
+          200p: px-to-rem(200px),
+          90p: px-to-rem(90px)
+        )
+      )
+    )
+);
+//Height
+$utilities: map-merge(
+  $utilities,
+    (
+      "height": (
+        responsive: true,
+        property: height,
+        class: h,
+        values: (
+          50p: px-to-rem(50px),
+          200p: px-to-rem(200px),
+          90p: px-to-rem(90px)
+        )
+      )
+    )
+);
