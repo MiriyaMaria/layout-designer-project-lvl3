@@ -1,18 +1,5 @@
 .avatar {
-  // width: px-to-rem(50px); //перенести в утилиту
-  // height: px-to-rem(50px); //перенести в утилиту
-  //border-radius: px-to-rem(50px);
-
-  &-chat {
-    width: px-to-rem(200px); //перенести в утилиту
-    height: px-to-rem(200px); //перенести в утилиту
-    border-radius: px-to-rem(100px); //перенести в утилиту
-  }
-
   &-profile {
-    width: px-to-rem(90px); //перенести в утилиту
-    height: px-to-rem(90px); //перенести в утилиту
     margin-top: px-to-rem(16px); //перенести в утилиту если будет часто встречаться (mr-top-16)
-    border-radius: px-to-rem(100px); //перенести в утилиту
   }
 }
