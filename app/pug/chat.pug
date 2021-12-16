@@ -7,5 +7,11 @@ html(lang='ru')
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel='stylesheet', href='/css/app.css')
     title Мессенджер «Hexlet Chat» Чурилова Мария
-  body
-  
+  body.h-100.p-md-4.bg-gray
+    .container-xxl.h-100.bg-white.border.border-gray.radius-16.p-0
+      .row.h-100.m-0.p-0
+        .col-4.h-100.p-0.d-flex.flex-column.border-right.border-gray
+          include ./components/headerforchat.pug
+        .col.h-100.d-flex.flex-column-reverse.justify-content-center.align-items-center
+          include ./components/active-chat.pug
+    script(src='/js/script.js')
