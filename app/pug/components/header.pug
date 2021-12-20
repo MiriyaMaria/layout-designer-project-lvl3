@@ -1,28 +1,28 @@
-  - const classTabContacts = currentSection === 'welcome' ? 'tab-pane fade show active' : 'tab-pane fade'
-  - const classTabChat = currentSection === 'welcome' ? 'tab-pane fade show active' : 'tab-pane fade'
+- classTabContacts = currentSection === 'welcome' ? 'tab-pane fade show active' : 'tab-pane fade'
+- classTabChat = currentSection === 'chat' ? 'tab-pane fade show active' : 'tab-pane fade'
 .header.bg-primary.d-flex.justify-content-end.align-items-center.radius-left-top-16
   a.me-auto(href="#")
     +icon('logo')
   ul.nav.nav-tabs.border-0(id="nav-tab", role="tablist")
     li.nav-item.d-flex.flex-nowrap(role="presentation")
-      a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent.justify-content-between(id="contacts-tab", data-bs-toggle="tab", data-bs-target="#contacts", role="tab", aria-controls="contacts", aria-selected="true") 
+      a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent.justify-content-between(id="contacts-tab", data-bs-toggle="tab", data-bs-target="#contacts", type="button", role="tab", aria-controls="contacts", aria-selected="true") 
         +icon('people') 
         span.ms-2.small Контакты
     li.nav-item.d-flex.flex-nowrap(role="presentation")
-      a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent(id="chat-tab", data-bs-toggle="tab", data-bs-target="#chat", role="tab", aria-controls="chat", aria-selected="false")
+      a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent(id="chat-tab", data-bs-toggle="tab", data-bs-target="#chat", type="button", role="tab", aria-controls="chat", aria-selected="false")
         +icon('chat') 
         span.ms-2.small Сообщения
     li.nav-item.d-flex.flex-nowrap(role="presentation")
-      a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent(id="profile-tab", data-bs-toggle="tab", data-bs-target="#profile", role="tab", aria-controls="profile", aria-selected="false")
+      a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent(id="profile-tab", data-bs-toggle="tab", data-bs-target="#profile", type="button", role="tab", aria-controls="profile", aria-selected="false")
         +icon('person')
         span.ms-2.small Профиль
 .work-panel.tab-content.pt-5.px-4(id="nav-tabContent")
-  div(id="contacts", role="tabpanel", aria-labelledby="contacts-tab", class="classTabContacts")
+  div(id="contacts", role="tabpanel", aria-labelledby="contacts-tab", class=classTabContacts)
     h2.mb-4.fw-bold.lh-1 Контакты
     form.mb-5(action="/")
       input.form-control.p-4.border-top-0.border-end-0.border-bottom.border-start-0.bg-white.shadow-none(type="search", placeholder="Поиск по контактам")
     include ./contacts.pug
-  div(id="chat", role="tabpanel", aria-labelledby="chat-tab", class="classTabChat")
+  div(id="chat", role="tabpanel", aria-labelledby="chat-tab", class=classTabChat)
     h2.mb-4.fw-bold.lh-1 Чаты
     form.mb-5(action="/")
       input.form-control.p-4.border-top-0.border-end-0.border-bottom.border-start-0.bg-white.shadow-none(type="search", placeholder="Поиск по сообщениям")
