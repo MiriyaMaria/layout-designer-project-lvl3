@@ -70,34 +70,29 @@ $utilities: map-merge(
           ),
         ),
       ),
+      "radius": (
+        responsive: true,
+        property: border-radius,
+        class: radius,
+        values: (null: 1rem, 16: 16px, 50: 50px, 100: 100px)
+      ),
+      "radius-left": (
+        responsive: true,
+        property: border-top-left-radius border-bottom-left-radius,
+        class: radius-left,
+        values: (null: 1rem)
+      ),
+      "radius-right": (
+        responsive: true,
+        property: border-top-right-radius border-bottom-right-radius,
+        class: radius-right,
+        values: (null: 1rem)
+      ),
+      "radius-left-top": (
+        responsive: true,
+        property: border-top-left-radius,
+        class: radius-left-top,
+        values: (null: 1rem, 16: 16px)
+      )
     )
-);
-
-// Radius
-$utilities: (
-  "radius": (
-    responsive: true,
-    property: border-radius,
-    class: radius,
-    values: (null: 1rem, 16: 16px, 50: 50px, 100: 100px)
-  ),
-
-  "radius-left": (
-    responsive: true,
-    property: border-top-left-radius border-bottom-left-radius,
-    class: radius-left,
-    values: (null: 1rem)
-  ),
-  "radius-right": (
-    responsive: true,
-    property: border-top-right-radius border-bottom-right-radius,
-    class: radius-right,
-    values: (null: 1rem)
-  ),
-  "radius-left-top": (
-    responsive: true,
-    property: border-top-left-radius,
-    class: radius-left-top,
-    values: (null: 1rem, 16: 16px)
-  ),
 );
