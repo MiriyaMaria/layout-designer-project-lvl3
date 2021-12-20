@@ -1,53 +1,4 @@
-// Radius, Width, Height
-$utilities: (
-  "radius": (
-    responsive: true,
-    property: border-radius,
-    class: radius,
-    values: (null: 1rem, 16: 16px, 50: 50px, 100: 100px)
-  ),
-
-  "radius-left": (
-    responsive: true,
-    property: border-top-left-radius border-bottom-left-radius,
-    class: radius-left,
-    values: (null: 1rem)
-  ),
-  "radius-right": (
-    responsive: true,
-    property: border-top-right-radius border-bottom-right-radius,
-    class: radius-right,
-    values: (null: 1rem)
-  ),
-  "radius-left-top": (
-    responsive: true,
-    property: border-top-left-radius,
-    class: radius-left-top,
-    values: (null: 1rem, 16: 16px)
-  ),
-  "width": (
-      responsive: true,
-      property: width,
-      class: w,
-      values: (
-        50p: px-to-rem(50px),
-        200p: px-to-rem(200px),
-        90p: px-to-rem(90px)
-      )
-    ),
-  "height": (
-    responsive: true,
-    property: height,
-    class: h,
-    values: (
-      50p: px-to-rem(50px),
-      200p: px-to-rem(200px),
-      90p: px-to-rem(90px)
-    )
-  )
-);
-
-// Border
+// Border, width, height
 $utilities: map-merge(
   $utilities,
     (
@@ -92,6 +43,61 @@ $utilities: map-merge(
           null: $border-width solid $border-color,
           0: 0,
         )
+      ),
+      "width": map-merge(
+        map-get($utilities, "width"),
+        (
+          values: map-merge(
+            map-get(map-get($utilities, "width"), "values"),
+            (
+              50p: px-to-rem(50px),
+              200p: px-to-rem(200px),
+              90p: px-to-rem(90px)
+            ),
+          ),
+        ),
+      ),
+      "height": map-merge(
+        map-get($utilities, "height"),
+        (
+          values: map-merge(
+            map-get(map-get($utilities, "height"), "values"),
+            (
+              50p: px-to-rem(50px),
+              200p: px-to-rem(200px),
+              90p: px-to-rem(90px)
+            ),
+          ),
+        ),
+      ),
     )
-  )
+);
+
+// Radius
+$utilities: (
+  "radius": (
+    responsive: true,
+    property: border-radius,
+    class: radius,
+    values: (null: 1rem, 16: 16px, 50: 50px, 100: 100px)
+  ),
+
+  "radius-left": (
+    responsive: true,
+    property: border-top-left-radius border-bottom-left-radius,
+    class: radius-left,
+    values: (null: 1rem)
+  ),
+  "radius-right": (
+    responsive: true,
+    property: border-top-right-radius border-bottom-right-radius,
+    class: radius-right,
+    values: (null: 1rem)
+  ),
+  "radius-left-top": (
+    responsive: true,
+    property: border-top-left-radius,
+    class: radius-left-top,
+    values: (null: 1rem, 16: 16px)
+  ),
 );
