@@ -19,11 +19,11 @@ mixin block(name, avatar, text, time)
 mixin message(avatar, name, text, time)
   img.avatar(src=avatar).w-50p.h-50p.me-3.radius-50
   if name 
-    span.d-flex.flex-column.overflow-hidden.bg-gray.p-4.shadow-sm.radius-16
+    span.message-box.d-flex.flex-column.overflow-hidden.bg-gray.p-4.shadow-sm.radius-16
       span.message-name.fw-bold= name 
-      span.message-text= text 
+      span.message-text.mb-3= text 
       span.message-time= time 
   else 
-    span.d-flex.flex-column.overflow-hidden.bg-primary.text-white.p-4.shadow-sm.radius-16
-      span.message-text.border-bottom= text 
-      span.message-time= time
+    span.message-box.d-flex.flex-column.overflow-hidden.bg-primary.text-white.p-4.shadow-sm.radius-16
+      span.message-text.border-bottom.pb-2= text 
+      span.message-time.pt-1= time

@@ -16,3 +16,7 @@
 @import "./components/_message";
 @import "./components/_chat-dialog";
 
+//reset appearance
+[type=button], [type=reset], [type=submit], button {
+  -webkit-appearance: none;
+}

@@ -1,4 +1,8 @@
 .message {
+  &-box {
+    max-width: px-to-rem(558px);
+  }
+
   &-time {
     font-weight: normal;
     font-size: $small-font-size;
