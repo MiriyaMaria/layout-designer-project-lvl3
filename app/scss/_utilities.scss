@@ -94,6 +94,12 @@ $utilities: map-merge(
         class: radius-left-top,
         values: (null: 1rem, 16: 16px)
       ),
+      "radius-right-top": (
+        responsive: true,
+        property: border-top-right-radius,
+        class: radius-right-top,
+        values: (null: 1rem, 16: 16px)
+      ),
       "margin-top": map-merge(
         map-get($utilities, "margin-top"),
         (

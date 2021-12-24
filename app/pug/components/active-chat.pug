@@ -1,6 +1,6 @@
-.chat-header.w-100.flex-grow-1.sticky-top.bg-white
+.chat-header.w-100.flex-grow-1.sticky-top.bg-white.radius-right-top-16
   +block('Вениамин Редакторович', '../images/avatar_4.jpg', 'Онлайн')(class="shadow-none border-bottom mt-none")
-.chat-dialog.d-flex.flex-column.p-5.w-100
+.chat-dialog.d-flex.flex-column.p-5.w-100.h-100
   -
     var messages = [
       {
@@ -39,4 +39,8 @@
     else 
       div.d-flex.justify-content-end.align-items-end.mb-3.w-100
         +message(message.avatar, message.name, message.text, message.time)
-.chat-message
+.chat-message.w-100.mx-5.p-2.border-top 
+  input-group.d-flex(action="/")
+      input.form-control.border-none(type="search", placeholder="Напишите сообщение...")
+      button.btn.btn-primary.radius-50.w-50p.h-50p(type="button")
+        +icon('cursor')
