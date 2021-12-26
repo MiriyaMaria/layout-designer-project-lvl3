@@ -1,5 +1,5 @@
-- classTabContacts = currentSection === 'welcome' ? 'tab-pane fade show active' : 'tab-pane fade'
-- classTabChat = currentSection === 'chat' ? 'tab-pane fade show active' : 'tab-pane fade'
+- classTabContacts = currentSection === 'welcome' ? 'tab-pane fade show active h-100' : 'tab-pane fade'
+- classTabChat = currentSection === 'chat' ? 'tab-pane fade show active h-100' : 'tab-pane fade'
 .header.bg-primary.d-flex.justify-content-end.align-items-center.radius-left-top-16
   a.me-auto(href="#")
     +icon('logo')
@@ -27,7 +27,7 @@
     form.mb-5(action="/")
       input.form-control.p-4.border-top-0.border-end-0.border-bottom.border-start-0.bg-white.shadow-none(type="search", placeholder="Поиск по сообщениям")
     include ./messages.pug
-  .tab-pane.fade(id="profile", role="tabpanel", aria-labelledby="profile-tab")
+  div.h-100.tab-pane.fade(id="profile", role="tabpanel", aria-labelledby="profile-tab")
     h2.mb-4.fw-bold.lh-1 Профиль
     form.mb-5(action="/")
       input.form-control.p-4.border-top-0.border-end-0.border-bottom.border-start-0.bg-white.shadow-none(type="search", placeholder="Поиск по сообщениям")
