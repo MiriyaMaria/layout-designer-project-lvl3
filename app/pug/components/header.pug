@@ -1,22 +1,25 @@
 - classTabContacts = currentSection === 'welcome' ? 'tab-pane fade show active h-100' : 'tab-pane fade'
 - classTabChat = currentSection === 'chat' ? 'tab-pane fade show active h-100' : 'tab-pane fade'
-.header.bg-primary.d-flex.justify-content-end.align-items-center.radius-left-top-16
+.header.bg-primary.d-flex.justify-content-end.align-items-center.radius-left-top-16.order-2.order-md-1
   a.me-auto(href="#")
     +icon('logo')
   ul.nav.nav-tabs.border-0(id="nav-tab", role="tablist")
+    li.nav-item.d-flex.d-md-none.flex-nowrap(role="presentation")
+      a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent.justify-content-between(id="contacts-tab", data-bs-toggle="tab", data-bs-target="#contacts", type="button", role="tab", aria-controls="contacts", aria-selected="true") 
+        +icon('chat-left-text')
     li.nav-item.d-flex.flex-nowrap(role="presentation")
       a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent.justify-content-between(id="contacts-tab", data-bs-toggle="tab", data-bs-target="#contacts", type="button", role="tab", aria-controls="contacts", aria-selected="true") 
         +icon('people') 
-        span.ms-2.small Контакты
+        span.d-none.d-md-inline.ms-2.small Контакты
     li.nav-item.d-flex.flex-nowrap(role="presentation")
       a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent(id="chat-tab", data-bs-toggle="tab", data-bs-target="#chat", type="button", role="tab", aria-controls="chat", aria-selected="false")
         +icon('chat') 
-        span.ms-2.small Сообщения
+        span.d-none.d-md-inline.ms-2.small Сообщения
     li.nav-item.d-flex.flex-nowrap(role="presentation")
       a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent(id="profile-tab", data-bs-toggle="tab", data-bs-target="#profile", type="button", role="tab", aria-controls="profile", aria-selected="false")
         +icon('person')
-        span.ms-2.small Профиль
-.work-panel.tab-content.py-5.px-4.h-100(id="nav-tabContent")
+        span.d-none.d-md-inline.ms-2.small Профиль
+.work-panel.tab-content.py-5.px-4.h-100.order-1.order-md-2(id="nav-tabContent")
   div(id="contacts", role="tabpanel", aria-labelledby="contacts-tab", class=classTabContacts)
     h2.mb-4.fw-bold.lh-1 Контакты
     form.mb-5(action="/")
