@@ -2,7 +2,7 @@
 
 include ./components/mixin.pug
 doctype html
-html.h-100.check(lang='ru')
+html.h-100(lang='ru')
   head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -14,6 +14,6 @@ html.h-100.check(lang='ru')
       .row.h-100.m-0.p-0
         .col-md-4.h-100.p-0.d-flex.flex-column.border-right.border-gray
           include ./components/header.pug
-        .col.h-100.w-100.p-0.chat-window
+        .col.h-100.w-100.p-0.d-none.d-md-flex.flex-column.hide-scrollbar
           include ./components/active-chat.pug
     script(src='/js/script.js')

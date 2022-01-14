@@ -2,19 +2,18 @@
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/utilities";
-@import "./components/_px_to_rem";
+@import "./px_to_rem";
 @import "./utilities";
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import "./general.scss";
-@import "./components/_hide-scrollbar";
-@import "./components/_icon";
+@import "./general";
+@import "./components/hide-scrollbar";
+@import "./components/icon";
 @import "./components/header";
 @import "./components/avatar";
-@import "./components/_work-panel";
-@import "./components/_block";
-@import "./components/_profile";
-@import "./components/_message";
-@import "./components/_chat-window";
+@import "./components/block";
+@import "./components/profile";
+@import "./components/message";
+@import "./components/chat-window";
 
 //reset appearance
 [type=button], [type=reset], [type=submit], button {
