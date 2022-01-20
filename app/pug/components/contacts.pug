@@ -37,6 +37,6 @@
   }
 
 each users, letter in contacts
-  .letter.text-muted.mt-5.mb-1= letter
+  .text-muted.mt-5.mb-1= letter
   each user in users
     +block(user.name, user.avatar, user.status)

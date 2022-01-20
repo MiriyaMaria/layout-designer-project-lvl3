@@ -21,7 +21,7 @@
       a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent(id="profile-tab", data-bs-toggle="tab", data-bs-target="#profile", type="button", role="tab", aria-controls="profile", aria-selected="false")
         +icon('person')
         span.d-none.d-md-inline.ms-2.small Профиль
-.work-panel.tab-content.h-100.order-1.order-md-2.hide-scrollbar(id="nav-tabContent")
+.tab-content.h-100.order-1.order-md-2.hide-scrollbar(id="nav-tabContent")
   div.tab-pane.fade(id="message", role="tabpanel", aria-labelledby="message-tab")
     include ./active-chat.pug
   div(id="contacts", role="tabpanel", aria-labelledby="contacts-tab", class=classTabContacts)

@@ -3,7 +3,7 @@ mixin icon(name)
     use(xlink:href='../images/stack/sprite.svg#' + name)
 
 mixin badge(name)
-  svg.badge.p-0.icon-small(fill='inherit')
+  svg.p-0.icon-small(fill='inherit')
     use(xlink:href='../images/stack/sprite.svg#' + name)
 
 mixin block(name, avatar, text, time)
@@ -20,10 +20,10 @@ mixin message(avatar, name, text, time)
   img.avatar(src=avatar).w-50p.h-50p.me-3.radius-50
   if name 
     span.message-box.d-flex.flex-column.overflow-hidden.bg-gray.p-4.shadow-sm.radius-16
-      span.message-name.fw-bold= name 
-      span.message-text.mb-3= text 
+      span.fw-bold= name 
+      span.mb-3= text 
       span.message-time= time 
   else 
     span.message-box.d-flex.flex-column.overflow-hidden.bg-primary.text-white.p-4.shadow-sm.radius-16
-      span.message-text.border-bottom.pb-2= text 
+      span.border-bottom.pb-2= text 
       span.message-time.pt-1= time
