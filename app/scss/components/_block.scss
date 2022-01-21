@@ -16,6 +16,7 @@
 
   &-time {
     margin-left: auto;
+
     color: map-get($map: $grays, $key: "600");
     font-weight: normal;
     font-size: $small-font-size;
@@ -23,11 +24,14 @@
 
   &:hover {
     color: white;
-    background-color: map-get($map: $theme-colors, $key: "primary");
-    cursor: pointer;
+
     text-decoration: none;
 
-    #{$block}-name, 
+    background-color: map-get($map: $theme-colors, $key: "primary");
+
+    cursor: pointer;
+
+    #{$block}-name,
     #{$block}-text,
     #{$block}-time {
       color: white;
