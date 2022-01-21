@@ -17,7 +17,7 @@ mixin block(name, avatar, text, time)
         span.block-text= text
 
 mixin message(avatar, name, text, time)
-  img.avatar(src=avatar).w-50p.h-50p.me-3.radius-50
+  img.avatar(src=avatar).w-50p.h-50p.me-3.radius-50.d-none.d-md-inline
   if name 
     span.message-box.d-flex.flex-column.overflow-hidden.bg-gray.p-4.shadow-sm.radius-16
       span.fw-bold= name 
