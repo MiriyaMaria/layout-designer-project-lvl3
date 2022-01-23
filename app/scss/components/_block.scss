@@ -1,5 +1,4 @@
 .block {
-  $block: &;
   padding: px-to-rem(20px);
 
   &-name {
@@ -31,9 +30,9 @@
 
     cursor: pointer;
 
-    #{$block}-name,
-    #{$block}-text,
-    #{$block}-time {
+    .block-name,
+    .block-text,
+    .block-time {
       color: white;
     }
   }
