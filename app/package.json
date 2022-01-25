@@ -22,7 +22,8 @@
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.20.1"
+    "stylelint-scss": "^3.20.1",
+    "surge": "^0.23.1"
   },
   "dependencies": {
     "bootstrap": "^5.1.3"
