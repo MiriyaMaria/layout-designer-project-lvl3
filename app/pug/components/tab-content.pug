@@ -2,19 +2,19 @@
 - classTabChat = currentSection === 'chat' ? 'tab-pane fade show active h-100  py-5 px-4' : 'tab-pane fade py-5 px-4'
 
 .tab-content.h-100.order-1.order-md-2.hide-scrollbar(id="nav-tabContent")
-  div.tab-pane.fade(id="message", role="tabpanel", aria-labelledby="message-tab")
+  div.tab-pane.fade(id="message", role="tabpanel")
     include ./active-chat.pug
-  div(id="contacts", role="tabpanel", aria-labelledby="contacts-tab", class=classTabContacts)
+  div(id="contacts", role="tabpanel", class=classTabContacts)
     h2.mb-4.fw-bold.lh-1 Контакты
     form.mb-5(action="/")
       input.form-control.p-4.border-top-0.border-end-0.border-bottom.border-start-0.bg-white.shadow-none(type="search", placeholder="Поиск по контактам")
     include ./contacts.pug
-  div(id="chat", role="tabpanel", aria-labelledby="chat-tab", class=classTabChat)
+  div(id="chat", role="tabpanel", class=classTabChat)
     h2.mb-4.fw-bold.lh-1 Чаты
     form.mb-5(action="/")
       input.form-control.p-4.border-top-0.border-end-0.border-bottom.border-start-0.bg-white.shadow-none(type="search", placeholder="Поиск по сообщениям")
     include ./messages.pug
-  div.h-100.tab-pane.fade.py-5.px-4(id="profile", role="tabpanel", aria-labelledby="profile-tab")
+  div.h-100.tab-pane.fade.py-5.px-4(id="profile", role="tabpanel")
     h2.mb-4.fw-bold.lh-1 Профиль
     form.mb-5(action="/")
       input.form-control.p-4.border-top-0.border-end-0.border-bottom.border-start-0.bg-white.shadow-none(type="search", placeholder="Поиск по сообщениям")
