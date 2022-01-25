@@ -8,7 +8,7 @@ mixin badge(name)
 
 mixin block(name, avatar, text, time)
   a&attributes(attributes).block.d-flex.align-items-center.mt-3.ps-3.pt-4.pe-5.shadow-sm.text-decoration-none
-    img.avatar(src=avatar).w-50p.h-50p.me-4.radius-50
+    img.avatar(src=avatar, alt="Аватар").w-50p.h-50p.me-4.radius-50
     span.d-flex.flex-column.overflow-hidden.w-100
       span.block-name.d-flex= name
         if time 
@@ -17,7 +17,7 @@ mixin block(name, avatar, text, time)
         span.block-text= text
 
 mixin message(avatar, name, text, time)
-  img.avatar(src=avatar).w-50p.h-50p.me-3.radius-50.d-none.d-md-inline
+  img.avatar(src=avatar, alt="Аватар").w-50p.h-50p.me-3.radius-50.d-none.d-md-inline
   if name 
     span.message-box.d-flex.flex-column.overflow-hidden.bg-light.p-4.shadow-sm.radius-16
       span.fw-bold= name 

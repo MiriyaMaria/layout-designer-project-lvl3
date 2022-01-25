@@ -1,0 +1,22 @@
+.header.bg-primary.d-flex.justify-content-end.align-items-center.radius-left-top-md.order-2.order-md-1
+  a.me-auto(href="/")
+    +icon('logo')
+  nav
+    ul.nav.nav-tabs.border-0(id="nav-tab", role="tablist")
+      if currentSection === 'chat'
+        li.nav-item.d-flex.d-md-none.flex-nowrap(role="presentation")
+          a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent.justify-content-between(href="#current-chat", data-bs-toggle="tab", data-bs-target="#message", role="tab", aria-controls="message", aria-selected="true") 
+            +icon('chat-left-text')
+      li.nav-item.d-flex.flex-nowrap(role="presentation")
+        a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent.justify-content-between(href="#contacts", data-bs-toggle="tab", data-bs-target="#contacts", role="tab", aria-controls="contacts", aria-selected="true") 
+          +icon('people') 
+          span.d-none.d-md-inline.ms-2.small Контакты
+      li.nav-item.d-flex.flex-nowrap(role="presentation")
+        a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent(href="#chats", data-bs-toggle="tab", data-bs-target="#chat", role="tab", aria-controls="chat", aria-selected="false")
+          +icon('chat') 
+          span.d-none.d-md-inline.ms-2.small Сообщения
+      li.nav-item.d-flex.flex-nowrap(role="presentation")
+        a.nav-link.text-white.d-flex.align-content-center.border-0.bg-transparent(href="#profile", data-bs-toggle="tab", data-bs-target="#profile", role="tab", aria-controls="profile", aria-selected="false")
+          +icon('person')
+          span.d-none.d-md-inline.ms-2.small Профиль
+          
